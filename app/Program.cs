@@ -6,7 +6,7 @@ namespace Ratcow.PasswordGenerator.App
     {
         static void Main(string[] args)
         {
-            var engine = new SequenceEngine();
+            var engine = new BlocksEngine();
             for (var i = 0; i < 1000; i++)
             {
                 var result = engine.Generate(12);
@@ -14,15 +14,15 @@ namespace Ratcow.PasswordGenerator.App
                 Console.WriteLine(result);
             }
 
-            Console.WriteLine("-------------------------");
+            //Console.WriteLine("-------------------------");
 
-            var engine2 = new Engine();
-            for (var i = 0; i < 1000; i++)
-            {
-                var result = engine.Generate(12);
+            //var engine2 = new Engine();
+            //for (var i = 0; i < 1000; i++)
+            //{
+            //    var result = engine.Generate(12);
 
-                Console.WriteLine(result);
-            }
+            //    Console.WriteLine(result);
+            //}
         }
     }
 }
