@@ -6,7 +6,13 @@ namespace Ratcow.PasswordGenerator.App
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            var engine = new Engine();
+            for (var i = 0; i < 10; i++)
+            {
+                var result = engine.Generate(12);
+
+                Console.WriteLine(result);
+            }
         }
     }
 }
