@@ -11,7 +11,6 @@ namespace Ratcow.PasswordGenerator
         enum CharType : byte { None, Vowel, Const }
         Random randomizer = new Random(DateTime.Now.Millisecond); // TODO - make this better
 
-
         string GetAFollow()
         {
             var result = string.Empty;
@@ -147,7 +146,7 @@ namespace Ratcow.PasswordGenerator
                                     result += GetHPostfix();
                                     break;
                                 case 'c':
-                                    if(!string.IsNullOrEmpty(lastchars))
+                                    if (!string.IsNullOrEmpty(lastchars))
                                     {
                                         result += GetCFollow();
                                     }
@@ -165,9 +164,9 @@ namespace Ratcow.PasswordGenerator
                 case CharType.Const:
                     {
 
-                        lastGenerated = CharType.Vowel;                        
-                        var i = lastchars.LastOrDefault() == 'u' ? 
-                            randomizer.Next(4) : 
+                        lastGenerated = CharType.Vowel;
+                        var i = lastchars.LastOrDefault() == 'u' ?
+                            randomizer.Next(4) :
                             randomizer.Next(v.Length - 1);
 
                         var x = v[i];
